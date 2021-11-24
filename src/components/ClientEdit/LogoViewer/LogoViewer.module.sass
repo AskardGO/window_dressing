@@ -1,0 +1,27 @@
+.preview
+  display: flex
+  width: 150px
+  height: 150px
+  position: relative
+  background-color: white
+  border-radius: .25rem
+
+  &:hover
+    background-color: #747d8c
+
+  & image, span, svg
+    width: 100%
+    height: 100%
+
+  &Message
+    display: flex
+    justify-content: center
+    align-items: center
+    position: absolute
+    width: 100%
+    color: #b7bbc2
+    font-weight: bolder
+
+.modal
+  & input
+    display: none

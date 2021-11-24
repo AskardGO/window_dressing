@@ -1,0 +1,198 @@
+/** {*/
+/*    overflow: hidden;*/
+/*}*/
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(255,0,0,0.4);
+}
+
+@keyframes smooth-app {
+    from {
+        opacity: 0;
+        visibility: hidden;
+    }
+    to {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.main-block {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    transition: .3s;
+    animation: smooth-app .3s ease-in-out;
+    z-index: -1;
+}
+
+.switch__block {
+    display: flex;
+    position: fixed;
+    left: 40px;
+    width: 18rem;
+    height: 4rem;
+    padding: 10px;
+    align-items: center;
+    margin-top: 1rem;
+    z-index: 5;
+}
+
+.switcher {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.switch {
+    align-self: center;
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    display: none;
+}
+.switch input:checked + .slider {
+    background-color: #eee;
+}
+.switch input:checked + .slider:before {
+    transform: translateX(26px);
+    background: rgba(79, 70, 229, 1);
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #313949;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    transition: 0.4s;
+    border-radius: 50%;
+    background-color: rgba(79, 70, 229, 1);
+}
+
+.invoice__element:hover {
+    background-color: #E6F5F9;
+}
+
+.add__invoice-button {
+    display: flex;
+    justify-content: center;
+    padding-right: .4rem;
+}
+
+.add__invoice-button button {
+    transition: .5s;
+    border-radius: 50%;
+}
+
+.add__invoice-button button:hover svg{
+    transition: .3s;
+    stroke: rgba(79, 70, 229, 1);
+}
+
+.add__invoice-form {
+    width: 100%;
+}
+
+.print__button {
+    stroke: black;
+}
+
+.print__button-bg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 3rem;
+    top: 75%;
+}
+
+.print__button-bg svg:active + .bloom {
+    animation: bloom linear 200ms;
+}
+
+.print__button-bg svg:hover {
+    stroke: rgba(84,58,183,1);
+}
+
+.print__button-bg svg:active {
+    stroke: rgb(110, 205, 104);
+}
+
+.bloom {
+    position: absolute;
+    background-color: white;
+    width: 120%;
+    height: 120%;
+    z-index: -1;
+    border-radius: 50%;
+    -webkit-box-shadow: 0 0 12px 10px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 0 0 12px 10px rgba(34, 60, 80, 0.2);
+    box-shadow: 0 0 12px 10px rgba(34, 60, 80, 0.2);
+}
+
+.bloom:hover {
+    background-color: #fc5c65;
+}
+
+.scoller {
+    width: 6rem;
+    height: 2rem;
+    border-radius: .5rem;
+    border: 2px solid #2f3542;
+    transform: rotateY(0deg);
+    -webkit-animation: rotate .1s;
+    animation: rotate .1s;
+    -webkit-box-shadow: 0 0 10px 2px rgba(34, 60, 80, 0.2) inset;
+    -moz-box-shadow: 0 0 10px 2px rgba(34, 60, 80, 0.2) inset;
+    box-shadow: 0 0 10px 2px rgba(34, 60, 80, 0.2) inset;
+}
+
+@keyframes rotate {
+    50% {
+        transform: none;
+    }
+}
+
+@keyframes bloom {
+    from {
+        width: 120%;
+        height: 120%;
+    }
+    to {
+        width: 140%;
+        height: 140%;
+    }
+}
+
+a:active, a:focus { outline: none; }
+
+input, textarea, button {outline:none;}
+input:active, textarea:active, button:active {outline:none;}
+:focus {outline:none;}
+textarea {resize:none;}
+textarea {resize:vertical;}
+textarea {resize:horizontal;}
+button:focus {outline:none;}

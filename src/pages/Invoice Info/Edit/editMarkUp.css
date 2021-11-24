@@ -1,0 +1,150 @@
+@keyframes smooth-app {
+    from {
+        opacity: 0;
+        visibility: hidden;
+    }
+    to {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.edit__block {
+    display: flex;
+    justify-content: center;
+    width: 60rem;
+    transition: .3s;
+    animation: smooth-app .3s ease-in-out;
+    padding-top: 6%;
+}
+
+.edit__block input {
+    border: 2px solid #827b7b;
+    padding: .2rem .5rem;
+}
+
+.edit__block textarea {
+    border: 2px solid #827b7b;
+    padding: .2rem .5rem;
+}
+
+.edit__block-content {
+    width: 100%;
+}
+
+.invoice__name {
+
+}
+
+.edit__block-top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.edit__block-drag {
+    width: 30%;
+    height: 10%;
+    border: 2px solid #827b7b;
+}
+
+.from__to-block {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    min-height: 5rem;
+    padding: 1rem;
+    background-color: white;
+    justify-content: space-around;
+}
+
+.from__to-block div {
+    border: 2px dashed #827b7b;
+}
+
+.from__to-block input {
+    width: 10rem;
+    height: 2rem;
+    padding-left: 2%;
+    margin-left: 3%;
+}
+
+.from__to-block label {
+    display: flex;
+    align-items: center;
+    padding: 3%;
+    width: 15rem;
+}
+
+.from__to-block span {
+    display: block;
+    width: 4rem;
+}
+
+.from-part .to-part {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.to-part {
+    max-height: 14rem;
+}
+
+.additional__info {
+    max-height: 9rem;
+}
+
+.select__terms select{
+    width: 100%;
+}
+
+.select__terms select:focus {
+    border: unset;
+}
+
+.block div {
+    display: flex;
+    justify-content: flex-end;
+    width: 10rem;
+    height: 2rem;
+    padding-left: 2%;
+    margin-left: 3%;
+}
+
+.invoice__list {
+    width: 100%;
+}
+
+.invoice__list-titles {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 6fr 1fr 1fr 1fr 1fr;
+    padding: 1rem;
+    background-color: white;
+}
+
+.invoice__list-titles span:not(:first-child) {
+    text-align: center;
+    border-left: 2px dashed #827b7b;
+}
+
+.invoice__list-titles span:first-child {
+    padding-left: 6%;
+}
+
+@media (max-width: 1000px) {
+    .edit__block-content {
+        width: 40%;
+    }
+
+    .edit__block-content input, .edit__block-drag {
+        width: 80%;
+    }
+
+    .edit__block-form div {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}

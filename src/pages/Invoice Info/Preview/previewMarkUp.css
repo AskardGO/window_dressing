@@ -1,0 +1,66 @@
+@keyframes smooth-app {
+    from {
+        opacity: 0;
+        visibility: hidden;
+    }
+    to {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.invoice__paper {
+    position: relative;
+    background-color: white;
+    margin: 1rem 1.5rem;
+    padding: 2rem;
+    transition: .3s;
+    animation: smooth-app .3s ease-in-out;
+    -webkit-box-shadow: 4px 4px 8px 0 rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 4px 4px 8px 0 rgba(34, 60, 80, 0.2);
+    box-shadow: 4px 4px 8px 0 rgba(34, 60, 80, 0.2);
+    height: 42rem;
+    width: 30rem;
+}
+
+@media print {
+    .header-inner {
+        display: none;
+    }
+
+    .header-left-top, .a-right-bottom, .time-right-bottom {
+        display: none;
+    }
+
+    .invoice__paper {
+        box-shadow: unset;
+        page-break-before: always;
+        zoom: 1.8;
+        margin: 0;
+    }
+
+    ::-webkit-scrollbar-track {
+        visibility: hidden;
+    }
+
+    @page { margin: 0; }
+    body { margin: 0; }
+
+    .switch__block {
+        display: none;
+    }
+}
+
+@media (max-width: 1023px) {
+    .switch__block {
+        position: fixed;
+        left: 45%;
+        top: -5rem;
+    }
+
+    nav {
+        padding-left: 2rem;
+    }
+}
+
+

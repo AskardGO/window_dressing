@@ -1,0 +1,52 @@
+.container
+  position: sticky
+  top: 0
+  width: 100%
+  z-index: 1
+
+  &Header
+    display: flex
+    position: relative
+    padding: .1rem
+    overflow: hidden
+    border: 1px rgb(156, 163, 175) solid
+    --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)
+    background-color: white
+    align-items: center
+    justify-content: space-between
+    margin: 0.5rem 0.5rem 0
+    border-radius: .25rem
+    min-height: 45px
+    -webkit-box-shadow: 0 3px 4px 0 rgba(34, 60, 80, 0.2)
+    -moz-box-shadow: 0 3px 4px 0 rgba(34, 60, 80, 0.2)
+    box-shadow: 0 3px 4px 0 rgba(34, 60, 80, 0.2)
+
+    & div, button
+      display: flex
+      align-items: center
+      margin: 0 .25rem
+
+    & button
+      padding: .5rem
+
+.controls
+  position: absolute
+  right: 0
+
+  &Save
+    display: flex
+    & span
+      margin-left: .5rem
+
+.scaler
+  position: absolute
+  right: 0
+  &Content
+    display: flex
+    flex-direction: column
+    height: 20rem
+    position: absolute
+    right: 0
+
+    & .ant-slider-mark
+      display: none

@@ -1,0 +1,53 @@
+.add__invoice-modal.active {
+    position: absolute;
+    display: flex;
+    background-color: rgba(209, 216, 224,0.8);
+    width: 100vw;
+    height: 100vh;
+    z-index: 999;
+    top: 0;
+    padding: 0;
+    margin: 0;
+    transition: .3s;
+    animation: smooth-app-on .3s ease-in-out;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+}
+
+
+
+.close__button-svg {
+    stroke: black;
+}
+
+.close__button-svg:hover {
+    stroke: #fc5c65;
+}
+
+.add__invoice-modal.unactive {
+    display: none;
+    transition: .3s;
+    animation: smooth-app-off .3s ease-in-out;
+}
+
+@keyframes smooth-app-on {
+    from {
+        opacity: 0;
+        visibility: hidden;
+    }
+    to {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+@keyframes smooth-app-off {
+    from {
+        opacity: 1;
+        visibility: visible;
+    }
+    to {
+        opacity: 0;
+    }
+}

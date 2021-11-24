@@ -1,0 +1,107 @@
+.template__second {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    font-family: Arial, sans-serif;
+}
+
+.template__second-top {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.template__second-client {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-size: .7rem;
+}
+
+.template__second-client div {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: .5rem;
+}
+
+
+
+.template__second-client span:first-child {
+    font-weight: bold;
+}
+.template__second-client div:last-child span:first-child {
+    font-size: .6rem;
+}
+
+.template__second-client span:not(:first-child) {
+    font-size: .4rem;
+}
+
+.template__second-info {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    width: 40%;
+    height: 50%;
+    top: -.5rem;
+}
+
+.template__second-title {
+    text-align: right;
+    font-family: Arial, sans-serif;
+}
+
+.second__info {
+    display: flex;
+    font-size: .4rem;
+    width: 100%;
+    padding: .5rem 0 0 1rem;
+}
+
+.second__info-titles {
+    display: flex;
+    flex-direction: column;
+    font-weight: bolder;
+    width: 6rem;
+}
+
+.second__info-vars {
+    display: flex;
+    flex-direction: column;
+}
+
+.second__middle {
+    width: 100%;
+    height: 20%;
+}
+
+table.second__table{text-decoration: none;border-collapse:collapse;width:100%;text-align:center; text-align-all: center}
+table.second__table th{font-weight:normal;font-size:.3rem; color:#ffffff;background-color: #c71c2e; height: 1rem; padding: 0 .5rem}
+table.second__table td{font-size:.4rem;color:#c71c2e;}
+table.second__table td,table.second__table th{line-height:.6rem;border: .01rem solid #b7bbc2; height: .8rem}
+table.second__table tr td:first-child {width: 10rem; text-align: left}
+.second__table-money {
+    display: flex;
+    justify-content: space-between;
+}
+
+.no-border {border: unset}
+
+.bg-red {
+    background-color: #fc5c65;
+}
+
+.text-xxs {
+    font-size: .3rem;
+}
+
+.red-font {
+    color: #a8313e;
+}
+
+.template__second img {
+    display: flex;
+    align-self: center;
+    width: 70%;
+}
